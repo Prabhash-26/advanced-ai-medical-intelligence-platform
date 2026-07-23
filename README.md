@@ -88,10 +88,10 @@ The LLM prompt is constrained to produce a cautious draft report with explainabi
 
 ## Model Training
 
-The included training script creates a synthetic radiograph-like dataset so evaluators can reproduce the pipeline without private patient data:
+The included training script creates a synthetic radiograph-like dataset so evaluators can reproduce the pipeline without private patient data. The bundled checkpoint was generated with this command:
 
 ```bash
-python scripts/train_model.py --samples-per-class 80 --epochs 8
+python scripts/train_model.py --samples-per-class 80 --epochs 12
 ```
 
 For a production-grade project, replace `SyntheticChestDataset` with a licensed dataset loader such as NIH ChestX-ray14, CheXpert, or RSNA Pneumonia Detection Challenge, then retrain and document validation metrics.
@@ -109,13 +109,13 @@ docker compose up --build
 ## Deliverables Checklist
 
 - Complete source code: included.
-- Trained model: `artifacts/models/medical_cnn.pt` path included; run training command to regenerate true weights.
-- GitHub repository link: add after pushing to GitHub.
+- Trained model: `artifacts/models/medical_cnn.pt` included as a reproducible demonstration checkpoint.
+- GitHub repository link: https://github.com/Prabhash-26/advanced-ai-medical-intelligence-platform
 - README documentation: this file.
 - PDF project report: `output/pdf/Advanced_AI_Medical_Intelligence_Platform_Report.pdf`.
 - `requirements.txt`: included.
 - `Dockerfile`: included.
-- Live deployment link: add after deploying to Render, Railway, AWS, Azure, or GCP.
+- Live deployment link: not deployed yet; deploy with the Docker or Streamlit instructions below.
 
 ## Suggested Deployment
 
@@ -124,4 +124,3 @@ docker compose up --build
 3. Deploy Streamlit UI on Streamlit Community Cloud or the same Docker host.
 4. Configure persistent storage for `medical_ai.db` and generated Grad-CAM images.
 5. Add the live API/UI URLs to this README and the submission email.
-

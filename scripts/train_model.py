@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -10,6 +11,8 @@ import torch
 from PIL import Image, ImageDraw, ImageFilter
 from torch import nn
 from torch.utils.data import DataLoader, Dataset, random_split
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 from app.ml.model import build_model
 from app.ml.preprocessing import IMAGE_SIZE, image_to_tensor
@@ -136,4 +139,3 @@ if __name__ == "__main__":
     parser.add_argument("--samples-per-class", type=int, default=80)
     parser.add_argument("--seed", type=int, default=42)
     train(parser.parse_args())
-

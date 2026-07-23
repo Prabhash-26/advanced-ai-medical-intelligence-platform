@@ -1,4 +1,4 @@
-.venv/
+.venv*/
 __pycache__/
 *.pyc
 .env
@@ -6,4 +6,3 @@ medical_ai.db
 artifacts/gradcam/
 .pytest_cache/
 .streamlit/
-

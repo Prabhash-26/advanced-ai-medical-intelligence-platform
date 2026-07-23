@@ -21,7 +21,7 @@ Medical image triage systems can help organize radiology workflows by highlighti
 
 ## Classes
 
-The demonstration classifier supports four labels: Normal, Pneumonia, COVID-19, and Tuberculosis. The included training script uses a synthetic radiograph-like dataset so the pipeline is reproducible without patient data. For clinical-quality evaluation, the dataset layer should be replaced with a licensed source such as NIH ChestX-ray14, CheXpert, MIMIC-CXR, or RSNA Pneumonia Detection Challenge.
+The demonstration classifier supports four labels: Normal, Pneumonia, COVID-19, and Tuberculosis. The included checkpoint was trained using the reproducible synthetic radiograph-like dataset from `scripts/train_model.py` so the pipeline is runnable without patient data. For clinical-quality evaluation, the dataset layer should be replaced with a licensed source such as NIH ChestX-ray14, CheXpert, MIMIC-CXR, or RSNA Pneumonia Detection Challenge.
 
 ## API Design
 
@@ -53,4 +53,3 @@ The bundled artifact is a reproducible educational demonstration, not a clinical
 ## Conclusion
 
 The project satisfies the requested end-to-end system requirements: source code, model artifact path, training script, XAI, LLM integration, REST APIs, database storage, web UI, documentation, Docker support, and PDF report.
-
