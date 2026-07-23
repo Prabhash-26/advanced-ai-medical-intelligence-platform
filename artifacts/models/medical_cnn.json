@@ -1,0 +1,11 @@
+{
+  "classes": [
+    "Normal",
+    "Pneumonia",
+    "COVID-19",
+    "Tuberculosis"
+  ],
+  "artifact": "artifacts/models/medical_cnn.pt",
+  "status": "placeholder until training script is executed",
+  "clinical_use": false
+}
