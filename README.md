@@ -2,8 +2,6 @@
 
 An end-to-end academic medical AI system for image analysis, disease prediction, Grad-CAM explainability, AI-assisted report generation, REST APIs, database-backed history, and a user-friendly web interface.
 
-> Safety: this project is for education and portfolio evaluation only. It is not a medical device and must not be used for clinical diagnosis.
-
 ## Features
 
 - Deep learning image classifier for `Normal`, `Pneumonia`, `COVID-19`, and `Tuberculosis`.
@@ -68,7 +66,7 @@ Open the UI at `http://localhost:8501`.
 - `GET /api/v1/heatmap/{filename}` - Grad-CAM overlay image.
 
 Example:
-
+for testing i have used the xray.jpeg image, we can use any image if needed for checking the model and evaluation.
 ```bash
 curl -X POST "http://localhost:8000/api/v1/predict" \
   -F "image=@artifacts/sample_images/sample_chest_xray.png"
